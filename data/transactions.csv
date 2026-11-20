@@ -1,0 +1,101 @@
+transaction_id,product_id,product_name,category,quantity,unit_price,discount_percent,payment_method,transaction_date,cashier_name
+T001,P001,Nasi Goreng,Makanan,2,25000,0,Cash,2026-11-01,Andi
+T002,P002,Mie Ayam,Makanan,3,20000,5,Cash,2026-11-01,Budi
+T003,P003,Ayam Geprek,Makanan,1,22000,10,Debit,2026-11-01,Citra
+T004,P004,Sate Ayam,Makanan,5,30000,15,Cash,2026-11-01,Dewi
+T005,P005,Kopi Arabica,Minuman,2,18000,0,Credit,2026-11-01,Andi
+T006,P006,Teh Manis,Minuman,4,8000,5,Cash,2026-11-01,Budi
+T007,P007,Jus Jeruk,Minuman,1,15000,10,Debit,2026-11-02,Citra
+T008,P008,Es Coklat,Minuman,3,12000,15,Cash,2026-11-02,Dewi
+T009,P009,Mouse Wireless,Elektronik,2,150000,0,Credit,2026-11-02,Andi
+T010,P010,Keyboard Mech,Elektronik,1,350000,5,Debit,2026-11-02,Budi
+T011,P011,Headset Gaming,Elektronik,6,275000,10,Cash,2026-11-02,Citra
+T012,P012,Flash Disk 32GB,Elektronik,2,85000,15,Cash,2026-11-03,Dewi
+T013,P013,Pulpen,Alat Tulis,8,5000,0,Debit,2026-11-03,Andi
+T014,P014,Buku Tulis A5,Alat Tulis,3,8000,5,Cash,2026-11-03,Budi
+T015,P015,Penghapus,Alat Tulis,1,3000,10,Credit,2026-11-03,Citra
+T016,P016,Pensil 2B,Alat Tulis,10,4000,15,Cash,2026-11-03,Dewi
+T017,P017,Sabun Cuci,Kebutuhan RT,2,15000,0,Debit,2026-11-04,Andi
+T018,P018,Tisu Wajah,Kebutuhan RT,3,12000,5,Cash,2026-11-04,Budi
+T019,P019,Sikat Gigi,Kebutuhan RT,1,10000,10,Credit,2026-11-04,Citra
+T020,P020,Pasta Gigi,Kebutuhan RT,2,18000,15,Debit,2026-11-04,Dewi
+T021,P001,Nasi Goreng,Makanan,2,25000,0,Cash,2026-11-04,Andi
+T022,P002,Mie Ayam,Makanan,3,20000,5,Cash,2026-11-04,Budi
+T023,P003,Ayam Geprek,Makanan,1,22000,10,Debit,2026-11-05,Citra
+T024,P004,Sate Ayam,Makanan,5,30000,15,Cash,2026-11-05,Dewi
+T025,P005,Kopi Arabica,Minuman,2,18000,0,Credit,2026-11-05,Andi
+T026,P006,Teh Manis,Minuman,4,8000,5,Cash,2026-11-05,Budi
+T027,P007,Jus Jeruk,Minuman,1,15000,10,Debit,2026-11-05,Citra
+T028,P008,Es Coklat,Minuman,3,12000,15,Cash,2026-11-06,Dewi
+T029,P009,Mouse Wireless,Elektronik,2,150000,0,Credit,2026-11-06,Andi
+T030,P010,Keyboard Mech,Elektronik,1,350000,5,Debit,2026-11-06,Budi
+T031,P011,Headset Gaming,Elektronik,6,275000,10,Cash,2026-11-06,Citra
+T032,P012,Flash Disk 32GB,Elektronik,2,85000,15,Cash,2026-11-06,Dewi
+T033,P013,Pulpen,Alat Tulis,8,5000,0,Debit,2026-11-07,Andi
+T034,P014,Buku Tulis A5,Alat Tulis,3,8000,5,Cash,2026-11-07,Budi
+T035,P015,Penghapus,Alat Tulis,1,3000,10,Credit,2026-11-07,Citra
+T036,P016,Pensil 2B,Alat Tulis,10,4000,15,Cash,2026-11-07,Dewi
+T037,P017,Sabun Cuci,Kebutuhan RT,2,15000,0,Debit,2026-11-07,Andi
+T038,P018,Tisu Wajah,Kebutuhan RT,3,12000,5,Cash,2026-11-08,Budi
+T039,P019,Sikat Gigi,Kebutuhan RT,1,10000,10,Credit,2026-11-08,Citra
+T040,P020,Pasta Gigi,Kebutuhan RT,2,18000,15,Debit,2026-11-08,Dewi
+T041,P001,Nasi Goreng,Makanan,2,25000,0,Cash,2026-11-08,Andi
+T042,P002,Mie Ayam,Makanan,3,20000,5,Cash,2026-11-08,Budi
+T043,P003,Ayam Geprek,Makanan,1,22000,10,Debit,2026-11-08,Citra
+T044,P004,Sate Ayam,Makanan,5,30000,15,Cash,2026-11-09,Dewi
+T045,P005,Kopi Arabica,Minuman,2,18000,0,Credit,2026-11-09,Andi
+T046,P006,Teh Manis,Minuman,4,8000,5,Cash,2026-11-09,Budi
+T047,P007,Jus Jeruk,Minuman,1,15000,10,Debit,2026-11-09,Citra
+T048,P008,Es Coklat,Minuman,3,12000,15,Cash,2026-11-09,Dewi
+T049,P009,Mouse Wireless,Elektronik,2,150000,0,Credit,2026-11-10,Andi
+T050,P010,Keyboard Mech,Elektronik,1,350000,5,Debit,2026-11-10,Budi
+T051,P011,Headset Gaming,Elektronik,6,275000,10,Cash,2026-11-10,Citra
+T052,P012,Flash Disk 32GB,Elektronik,2,85000,15,Cash,2026-11-10,Dewi
+T053,P013,Pulpen,Alat Tulis,8,5000,0,Debit,2026-11-10,Andi
+T054,P014,Buku Tulis A5,Alat Tulis,3,8000,5,Cash,2026-11-11,Budi
+T055,P015,Penghapus,Alat Tulis,1,3000,10,Credit,2026-11-11,Citra
+T056,P016,Pensil 2B,Alat Tulis,10,4000,15,Cash,2026-11-11,Dewi
+T057,P017,Sabun Cuci,Kebutuhan RT,2,15000,0,Debit,2026-11-11,Andi
+T058,P018,Tisu Wajah,Kebutuhan RT,3,12000,5,Cash,2026-11-11,Budi
+T059,P019,Sikat Gigi,Kebutuhan RT,1,10000,10,Credit,2026-11-12,Citra
+T060,P020,Pasta Gigi,Kebutuhan RT,2,18000,15,Debit,2026-11-12,Dewi
+T061,P001,Nasi Goreng,Makanan,2,25000,0,Cash,2026-11-12,Andi
+T062,P002,Mie Ayam,Makanan,3,20000,5,Cash,2026-11-12,Budi
+T063,P003,Ayam Geprek,Makanan,1,22000,10,Debit,2026-11-12,Citra
+T064,P004,Sate Ayam,Makanan,5,30000,15,Cash,2026-11-12,Dewi
+T065,P005,Kopi Arabica,Minuman,2,18000,0,Credit,2026-11-13,Andi
+T066,P006,Teh Manis,Minuman,4,8000,5,Cash,2026-11-13,Budi
+T067,P007,Jus Jeruk,Minuman,1,15000,10,Debit,2026-11-13,Citra
+T068,P008,Es Coklat,Minuman,3,12000,15,Cash,2026-11-13,Dewi
+T069,P009,Mouse Wireless,Elektronik,2,150000,0,Credit,2026-11-13,Andi
+T070,P010,Keyboard Mech,Elektronik,1,350000,5,Debit,2026-11-14,Budi
+T071,P011,Headset Gaming,Elektronik,6,275000,10,Cash,2026-11-14,Citra
+T072,P012,Flash Disk 32GB,Elektronik,2,85000,15,Cash,2026-11-14,Dewi
+T073,P013,Pulpen,Alat Tulis,8,5000,0,Debit,2026-11-14,Andi
+T074,P014,Buku Tulis A5,Alat Tulis,3,8000,5,Cash,2026-11-14,Budi
+T075,P015,Penghapus,Alat Tulis,1,3000,10,Credit,2026-11-15,Citra
+T076,P016,Pensil 2B,Alat Tulis,10,4000,15,Cash,2026-11-15,Dewi
+T077,P017,Sabun Cuci,Kebutuhan RT,2,15000,0,Debit,2026-11-15,Andi
+T078,P018,Tisu Wajah,Kebutuhan RT,3,12000,5,Cash,2026-11-15,Budi
+T079,P019,Sikat Gigi,Kebutuhan RT,1,10000,10,Credit,2026-11-15,Citra
+T080,P020,Pasta Gigi,Kebutuhan RT,2,18000,15,Debit,2026-11-16,Dewi
+T081,P001,Nasi Goreng,Makanan,2,25000,0,Cash,2026-11-16,Andi
+T082,P002,Mie Ayam,Makanan,3,20000,5,Cash,2026-11-16,Budi
+T083,P003,Ayam Geprek,Makanan,1,22000,10,Debit,2026-11-16,Citra
+T084,P004,Sate Ayam,Makanan,5,30000,15,Cash,2026-11-16,Dewi
+T085,P005,Kopi Arabica,Minuman,2,18000,0,Credit,2026-11-16,Andi
+T086,P006,Teh Manis,Minuman,4,8000,5,Cash,2026-11-17,Budi
+T087,P007,Jus Jeruk,Minuman,1,15000,10,Debit,2026-11-17,Citra
+T088,P008,Es Coklat,Minuman,3,12000,15,Cash,2026-11-17,Dewi
+T089,P009,Mouse Wireless,Elektronik,2,150000,0,Credit,2026-11-17,Andi
+T090,P010,Keyboard Mech,Elektronik,1,350000,5,Debit,2026-11-17,Budi
+T091,P011,Headset Gaming,Elektronik,6,275000,10,Cash,2026-11-18,Citra
+T092,P012,Flash Disk 32GB,Elektronik,2,85000,15,Cash,2026-11-18,Dewi
+T093,P013,Pulpen,Alat Tulis,8,5000,0,Debit,2026-11-18,Andi
+T094,P014,Buku Tulis A5,Alat Tulis,3,8000,5,Cash,2026-11-18,Budi
+T095,P015,Penghapus,Alat Tulis,1,3000,10,Credit,2026-11-18,Citra
+T096,P016,Pensil 2B,Alat Tulis,10,4000,15,Cash,2026-11-19,Dewi
+T097,P017,Sabun Cuci,Kebutuhan RT,2,15000,0,Debit,2026-11-19,Andi
+T098,P018,Tisu Wajah,Kebutuhan RT,3,12000,5,Cash,2026-11-19,Budi
+T099,P019,Sikat Gigi,Kebutuhan RT,1,10000,10,Credit,2026-11-19,Citra
+T100,P020,Pasta Gigi,Kebutuhan RT,2,18000,15,Debit,2026-11-19,Dewi

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan — POS System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-pos no-print">
+        <div class="container">
+            <a class="navbar-brand text-white" href="/"><i class="bi bi-cart-check-fill me-2"></i>POS System</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="/"><i class="bi bi-speedometer2 me-1"></i>Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/products"><i class="bi bi-box-seam me-1"></i>Produk</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/transactions"><i class="bi bi-cart3 me-1"></i>Transaksi</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/reports"><i class="bi bi-file-earmark-text me-1"></i>Laporan</a></li>
+                </ul>
+                <div class="d-flex align-items-center gap-3">
+                    <span class="text-white-50 small" id="userInfo"></span>
+                    <button class="btn btn-sm btn-logout" onclick="logout()"><i class="bi bi-box-arrow-right me-1"></i>Logout</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div class="container main-content">
+        <h2 class="page-title no-print"><i class="bi bi-file-earmark-text me-2"></i>Laporan Penjualan</h2>
+
+        <!-- STEP INDICATORS -->
+        <div class="card-pos mb-3 no-print">
+            <div class="card-header">
+                <i class="bi bi-list-ol me-2"></i>Langkah-langkah Generate Laporan
+            </div>
+            <div class="card-body">
+                <div class="step-indicator" id="step1">
+                    <div class="step-number pending" id="step1Number">1</div>
+                    <div class="step-label">
+                        <strong>Proses Data (C Engine)</strong>
+                        <div class="small text-muted">Export transaksi ke CSV lalu jalankan C Processor untuk menghitung subtotal, diskon, dan sorting.</div>
+                    </div>
+                    <div>
+                        <button class="btn btn-warning btn-sm" id="btnStep1" onclick="runStep1()">
+                            <i class="bi bi-gear-fill me-1"></i>Proses Data
+                        </button>
+                    </div>
+                    <div class="step-status" id="step1Status"></div>
+                </div>
+
+                <div class="step-indicator" id="step2">
+                    <div class="step-number pending" id="step2Number">2</div>
+                    <div class="step-label">
+                        <strong>Generate Laporan (COBOL Reporter)</strong>
+                        <div class="small text-muted">Jalankan COBOL Reporter untuk membuat laporan rekapitulasi, penjualan harian, dan produk terlaris.</div>
+                    </div>
+                    <div>
+                        <button class="btn btn-info btn-sm" id="btnStep2" onclick="runStep2()">
+                            <i class="bi bi-file-earmark-text-fill me-1"></i>Generate Laporan
+                        </button>
+                    </div>
+                    <div class="step-status" id="step2Status"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- REPORT DISPLAY -->
+        <div class="card-pos">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <span><i class="bi bi-journal-text me-2"></i>Laporan Pendapatan</span>
+                <div class="no-print">
+                    <button class="btn btn-sm btn-outline-secondary me-1" onclick="loadReport()" title="Refresh">
+                        <i class="bi bi-arrow-clockwise"></i>
+                    </button>
+                    <button class="btn btn-sm btn-outline-primary" onclick="printReport()" id="btnPrint" disabled>
+                        <i class="bi bi-printer me-1"></i>Print
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="report-display" id="reportContent">Laporan belum digenerate.
+
+Ikuti langkah-langkah di atas:
+  1. Klik "Proses Data" untuk menjalankan C Engine
+  2. Klik "Generate Laporan" untuk menjalankan COBOL Reporter
+  3. Laporan akan tampil di sini</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/api.js"></script>
+    <script src="/js/reports.js"></script>
+</body>
+</html>

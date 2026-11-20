@@ -1,0 +1,504 @@
+/* ==================================================================
+   style.css — Custom Stylesheet
+   Sistem Informasi Penjualan (Point of Sales)
+   Melengkapi Bootstrap 5 CDN
+   ================================================================== */
+
+/* ---- ROOT VARIABLES ---- */
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+    --success-color: #16a34a;
+    --danger-color: #dc2626;
+    --warning-color: #f59e0b;
+    --info-color: #0891b2;
+    --bg-light: #f8fafc;
+    --bg-card: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+    --radius: 0.5rem;
+}
+
+/* ---- GLOBAL ---- */
+body {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+}
+
+/* ---- NAVBAR ---- */
+.navbar-pos {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    box-shadow: var(--shadow-md);
+    padding: 0.5rem 0;
+}
+
+.navbar-pos .navbar-brand {
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+}
+
+.navbar-pos .nav-link {
+    color: rgba(255,255,255,0.85) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    transition: all 0.2s;
+}
+
+.navbar-pos .nav-link:hover,
+.navbar-pos .nav-link.active {
+    color: #fff !important;
+    background: rgba(255,255,255,0.15);
+}
+
+.navbar-pos .btn-logout {
+    color: rgba(255,255,255,0.85);
+    border: 1px solid rgba(255,255,255,0.4);
+    font-size: 0.875rem;
+}
+
+.navbar-pos .btn-logout:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.15);
+    border-color: rgba(255,255,255,0.7);
+}
+
+/* ---- MAIN CONTENT ---- */
+.main-content {
+    padding: 1.5rem 0 3rem;
+}
+
+.page-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+}
+
+/* ---- STAT CARDS ---- */
+.stat-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-card .stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.stat-card .stat-value {
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.stat-card .stat-label {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-top: 0.125rem;
+}
+
+.stat-icon.bg-products { background: #dbeafe; color: #2563eb; }
+.stat-icon.bg-transactions { background: #d1fae5; color: #16a34a; }
+.stat-icon.bg-revenue { background: #fef3c7; color: #d97706; }
+.stat-icon.bg-cashiers { background: #e0e7ff; color: #4f46e5; }
+
+/* ---- CARDS ---- */
+.card-pos {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.card-pos .card-header {
+    background: transparent;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+    padding: 1rem 1.25rem;
+}
+
+.card-pos .card-body {
+    padding: 1.25rem;
+}
+
+/* ---- TABLES ---- */
+.table-pos {
+    margin-bottom: 0;
+}
+
+.table-pos thead th {
+    background: #f1f5f9;
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 2px solid var(--border-color);
+    padding: 0.75rem;
+    white-space: nowrap;
+}
+
+.table-pos tbody td {
+    padding: 0.75rem;
+    vertical-align: middle;
+    font-size: 0.9rem;
+}
+
+.table-pos tbody tr:hover {
+    background-color: #f8fafc;
+}
+
+/* ---- BADGES ---- */
+.badge-category {
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.3em 0.6em;
+    border-radius: 0.25rem;
+}
+
+.badge-makanan { background: #fee2e2; color: #991b1b; }
+.badge-minuman { background: #dbeafe; color: #1e40af; }
+.badge-elektronik { background: #fef3c7; color: #92400e; }
+.badge-alat-tulis { background: #d1fae5; color: #065f46; }
+.badge-kebutuhan-rt { background: #e0e7ff; color: #3730a3; }
+
+.badge-cash { background: #d1fae5; color: #065f46; }
+.badge-debit { background: #dbeafe; color: #1e40af; }
+.badge-credit { background: #fef3c7; color: #92400e; }
+
+/* ---- BUTTONS ---- */
+.btn-pos-primary {
+    background: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--radius);
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.btn-pos-primary:hover {
+    background: var(--primary-dark);
+    color: #fff;
+}
+
+/* ---- LOGIN PAGE ---- */
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+}
+
+.login-card {
+    background: var(--bg-card);
+    border-radius: 1rem;
+    box-shadow: var(--shadow-lg);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-card .login-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.25rem;
+}
+
+.login-card .login-subtitle {
+    color: var(--text-secondary);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.login-card .form-control {
+    border-radius: var(--radius);
+    padding: 0.65rem 1rem;
+}
+
+.login-card .btn-login {
+    width: 100%;
+    padding: 0.65rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+}
+
+.demo-info {
+    background: #f0f9ff;
+    border: 1px solid #bae6fd;
+    border-radius: var(--radius);
+    padding: 0.75rem 1rem;
+    font-size: 0.8rem;
+    color: #0c4a6e;
+    margin-top: 1rem;
+}
+
+.demo-info code {
+    background: #e0f2fe;
+    padding: 0.1em 0.3em;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+
+/* ---- REPORT DISPLAY ---- */
+.report-display {
+    background: #1e293b;
+    color: #e2e8f0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    white-space: pre;
+    overflow-x: auto;
+    min-height: 200px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* ---- STEP INDICATOR ---- */
+.step-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    background: #f8fafc;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    margin-bottom: 0.75rem;
+}
+
+.step-indicator .step-number {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+}
+
+.step-indicator .step-number.pending {
+    background: #e2e8f0;
+    color: #64748b;
+}
+
+.step-indicator .step-number.success {
+    background: #16a34a;
+    color: #fff;
+}
+
+.step-indicator .step-number.processing {
+    background: #f59e0b;
+    color: #fff;
+}
+
+.step-indicator .step-label {
+    font-weight: 500;
+    flex-grow: 1;
+}
+
+.step-indicator .step-status {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* ---- RECEIPT / STRUK ---- */
+.receipt-box {
+    background: #fff;
+    border: 2px dashed #ccc;
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85rem;
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.receipt-box .receipt-header {
+    text-align: center;
+    border-bottom: 1px dashed #999;
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.receipt-box .receipt-footer {
+    text-align: center;
+    border-top: 1px dashed #999;
+    padding-top: 0.75rem;
+    margin-top: 0.75rem;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* ---- CART ---- */
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.cart-total {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    border-top: 2px solid var(--border-color);
+    padding-top: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+/* ---- SEARCH & FILTER ---- */
+.search-filter-bar {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.search-filter-bar .form-control,
+.search-filter-bar .form-select {
+    border-radius: var(--radius);
+}
+
+/* ---- LOADING SPINNER ---- */
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* ---- TOAST NOTIFICATION ---- */
+.toast-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10000;
+}
+
+/* ---- FORMAT RUPIAH ---- */
+.text-rupiah {
+    font-variant-numeric: tabular-nums;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+    .stat-card .stat-value {
+        font-size: 1.25rem;
+    }
+
+    .search-filter-bar {
+        flex-direction: column;
+    }
+
+    .table-responsive {
+        font-size: 0.85rem;
+    }
+
+    .report-display {
+        font-size: 0.65rem;
+    }
+}
+
+/* ============================================================
+   PRINT STYLES
+   Memastikan saat mencetak struk/laporan tampil bersih
+   tanpa navbar, tombol, dan elemen UI lainnya.
+   ============================================================ */
+@media print {
+    /* Sembunyikan elemen UI */
+    .navbar-pos,
+    .no-print,
+    .btn,
+    .search-filter-bar,
+    .step-indicator,
+    .toast-container,
+    .modal-backdrop,
+    footer {
+        display: none !important;
+    }
+
+    /* Reset background */
+    body {
+        background: #fff !important;
+        color: #000 !important;
+        font-size: 10pt;
+    }
+
+    .main-content {
+        padding: 0 !important;
+    }
+
+    /* Report display: tampil rapi hitam-putih */
+    .report-display {
+        background: #fff !important;
+        color: #000 !important;
+        border: 1px solid #ccc;
+        font-size: 9pt;
+        max-height: none;
+        overflow: visible;
+        page-break-inside: avoid;
+    }
+
+    /* Receipt: tampil penuh */
+    .receipt-box {
+        border: none;
+        max-width: 100%;
+        padding: 0;
+        page-break-inside: avoid;
+    }
+
+    /* Card styling */
+    .card-pos {
+        border: 1px solid #ddd;
+        box-shadow: none;
+    }
+
+    /* Hindari page break di tengah tabel */
+    table {
+        page-break-inside: auto;
+    }
+
+    tr {
+        page-break-inside: avoid;
+    }
+}

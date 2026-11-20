@@ -1,0 +1,7 @@
+﻿*.exe
+c/processor
+cobol/reporter
+go/pos-system
+data/*.db
+data/processed_data.csv
+data/report_output.txt

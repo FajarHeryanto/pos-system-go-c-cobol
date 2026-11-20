@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login — POS System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-card">
+            <div class="text-center mb-3">
+                <i class="bi bi-cart-check-fill" style="font-size: 3rem; color: var(--primary-color);"></i>
+            </div>
+            <h1 class="login-title">POS System</h1>
+            <p class="login-subtitle">Sistem Informasi Penjualan</p>
+
+            <div id="loginAlert" class="alert alert-danger d-none" role="alert"></div>
+
+            <form id="loginForm">
+                <div class="mb-3">
+                    <label for="username" class="form-label">Username</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-person"></i></span>
+                        <input type="text" class="form-control" id="username" placeholder="Masukkan username"
+                               required minlength="3" maxlength="20" autocomplete="username">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                        <input type="password" class="form-control" id="password" placeholder="Masukkan password"
+                               required minlength="6" autocomplete="current-password">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-login" id="btnLogin">
+                    <i class="bi bi-box-arrow-in-right me-1"></i> Login
+                </button>
+            </form>
+
+            <div class="demo-info">
+                <strong><i class="bi bi-info-circle"></i> Akun Demo:</strong><br>
+                Admin: <code>admin</code> / <code>admin123</code><br>
+                Kasir: <code>andi</code> / <code>kasir123</code>
+                <span class="text-muted">(juga: budi, citra, dewi)</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/api.js"></script>
+    <script>
+        // Redirect jika sudah login
+        if (isLoggedIn()) {
+            window.location.href = '/';
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const btn = document.getElementById('btnLogin');
+            const alert = document.getElementById('loginAlert');
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+
+            // Disable button saat proses
+            btn.disabled = true;
+            btn.innerHTML = '<span class="spinner-border spinner-border-sm me-1"></span> Logging in...';
+            alert.classList.add('d-none');
+
+            try {
+                const result = await AuthAPI.login(username, password);
+
+                // Simpan token dan data user ke localStorage
+                localStorage.setItem('pos_token', result.data.token);
+                localStorage.setItem('pos_user', JSON.stringify(result.data.user));
+
+                // Redirect ke dashboard
+                window.location.href = '/';
+            } catch (err) {
+                alert.textContent = err.message;
+                alert.classList.remove('d-none');
+                btn.disabled = false;
+                btn.innerHTML = '<i class="bi bi-box-arrow-in-right me-1"></i> Login';
+            }
+        });
+    </script>
+</body>
+</html>
